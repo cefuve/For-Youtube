@@ -21,7 +21,6 @@ unsigned long tiempo_actual2 = 0;
 
 void setup() {
   Serial.begin(9600);
-  Serial.println(max_opciones);
   lcd.begin();
   lcd.backlight();
   pinMode(led, OUTPUT);
