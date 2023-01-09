@@ -39,7 +39,8 @@ void loop() {
     }
   }
 
-  if(millis() >= tiempo_actual + 3000 && isWait){
+//if(millis() >= tiempo_actual + 3000   Lógica que genera error
+  if(millis() - tiempo_actual > 3000 && isWait){
     if(isArmed) digitalWrite(led_alert, HIGH);
     isWait = false;
   }
