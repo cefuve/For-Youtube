@@ -87,8 +87,10 @@ void loop() {
   if(modo_edicion) return;
 
 
-  //Reloj digital  
-  if(millis() >= tiempo_actual + 1000){
+  //Reloj digital
+  
+//if(millis() >= tiempo_actual + 1000)   Lógica que genera error
+  if(millis() - tiempo_actual > 1000){
     tiempo_actual = millis();
     blink_time = !blink_time;
     second++;
