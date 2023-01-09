@@ -40,12 +40,14 @@ void loop() {
     run_option();
   }
 
-  if(millis() >= tiempo_actual + 500){
+//if(millis() >= tiempo_actual + 500)   Lógica que genera error
+  if(millis() - tiempo_actual  > 500){
     tiempo_actual = millis();
     if(hz_1) digitalWrite(led, !digitalRead(led));
   }
 
-  if(millis() >= tiempo_actual2 + 6000){
+//if(millis() >= tiempo_actual2 + 6000)   Lógica que genera error
+  if(millis()- tiempo_actual2 > 6000){
     if(mono) digitalWrite(led, LOW);
   }
 
