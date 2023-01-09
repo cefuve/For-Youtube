@@ -35,7 +35,8 @@ void loop() {
 
     lecturaboton_old = lecturaboton;
 
-    if(millis() >= tiempoactual + 1000){
+  //if(millis() >= tiempoactual + 1000)  Lógica que genera error
+    if(millis() - tiempoactual > 1000){
         tiempoactual = millis();
         tiempo(); 
     }
@@ -48,7 +49,8 @@ void loop() {
     bool maximo = mitiempo < final;
     
     if( minimo && maximo ){
-        if(millis() >= tiempoactual2 + 100){
+      //if(millis() >= tiempoactual2 + 100)  Lógica que genera error
+        if(millis() - tiempoactual2 > 100){
             tiempoactual2 = millis();
             Serial.println("LED!");
             parpadeo();
